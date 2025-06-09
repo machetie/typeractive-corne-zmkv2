@@ -26,7 +26,6 @@
 #include <dt-bindings/zmk/keys.h>        // Standard key definitions
 #include <dt-bindings/zmk/mouse.h>       // Mouse button definitions
 #include <dt-bindings/zmk/pointing.h>    // Pointing device definitions
-#include "mouse.dtsi"                   // Custom mouse configuration
 
 /* 
  * LAYER DEFINITIONS
@@ -277,10 +276,10 @@
          */
         mouse {
             bindings = <
-                &trans &trans &trans &mkp MB4 &mkp MB5 &trans           U_WH_L U_WH_D U_WH_U U_WH_R &trans &trans
-                &trans &trans &trans &trans   &trans   &trans           U_MS_L U_MS_D U_MS_U U_MS_R &trans &trans
-                &trans &trans &trans &trans   &trans   &trans           &trans   &sk LSFT &sk RCTL &sk LALT &sk LGUI &trans 
-                                     &trans   &mkp MB1 &mkp MB3         &mkp MB2 &trans &trans
+&trans  &trans  &trans  &mkp MB4  &mkp MB5  &trans                 &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans   &trans
+&trans  &trans  &trans  &trans    &trans    &trans                 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans   &trans
+&trans  &trans  &trans  &trans    &trans    &trans                 &trans   &sk LSFT &sk RCTL &sk LALT &sk LGUI &trans 
+                        &trans    &mkp MB1  &mkp MB3               &mkp MB2 &trans   &trans
             >;
         };
     };
