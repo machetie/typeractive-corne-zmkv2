@@ -1,23 +1,32 @@
 manifest:
+  defaults:
+    remote: urob
+    revision: v0.2 # Pin everything to v0.2
+
   remotes:
+    - name: urob
+      url-base: https://github.com/urob
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: ReFil
-      url-base: https://github.com/ReFil
-    - name: tobiasarndt
-      url-base: https://github.com/tobiasarndt
-    - name: infused-kim
-      url-base: https://github.com/infused-kim
 
   projects:
     - name: zmk
-      remote: ReFil
-      revision: split-data-xfer
+      remote: zmkfirmware
       import: app/west.yml
 
-    - name: tmp-npv
-      remote: infused-kim
-      revision: main
+    - name: zephyr
+      revision: v3.5.0+zmk-fixes
+      clone-depth: 1
+      import:
+        # Only enable most commonly used boards. For less common hardware one
+        # may need to enable additional modules.
+        name-allowlist:
+          - cmsis
+          - hal_nordic
+          - hal_rpi_pico
+          - hal_stm32
+          - lvgl
+          - tinycrypt
 
   self:
     path: config
