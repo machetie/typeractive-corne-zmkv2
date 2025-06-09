@@ -142,10 +142,10 @@
 
         mouse {
             bindings = <
-                &trans &trans &trans &trans &trans &trans   U_WH_L U_WH_D U_WH_U U_WH_R &trans &trans
-                &trans &trans &trans &trans &trans &kp N7   U_MS_L U_MS_D U_MS_U U_MS_R &trans &trans
-                &trans &trans &trans &trans &trans &trans   &trans &sk LSFT &sk RCTL &sk LALT &sk LGUI &trans 
-                &trans &mkp MB1 &kp ESC      &kp K_CANCEL &mkp MB2 &kp TAB
+                &trans &trans &trans &mkp MB4 &mkp MB5 &trans           &U_WH_L &U_WH_D &U_WH_U &U_WH_R &trans &trans
+                &trans &trans &trans &trans   &trans   &trans           &U_MS_L &U_MS_D &U_MS_U &U_MS_R &trans &trans
+                &trans &trans &trans &trans   &trans   &trans           &trans   &sk LSFT &sk RCTL &sk LALT &sk LGUI &trans 
+                                     &trans   &mkp MB1 &mkp MB3         &mkp MB2 &trans &trans
             >;
         };
     };
